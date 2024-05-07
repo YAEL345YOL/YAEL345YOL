@@ -10,8 +10,6 @@ class Array:
         self.max_element = max(self.elements)
         self.min_element = min(self.elements)
         self.table = Table([[str(number) for number in self.elements]],include_outer_lines=True).scale(scale_)
-        self.downPoints = []
-        self.upPoints = []
 
     def getUpPoints(self,delta=1.25):
         upPoints = []
