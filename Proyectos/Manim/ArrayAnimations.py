@@ -1,32 +1,58 @@
+from manim import *
 
-def putIndex(self,table,index=[],table_scale=1):
-    columns = table.get_columns()
-    for i in range(0,len(columns)):
-        pos = columns[i].get_top()
-        pos[1]+=table_scale*0.9
-        act = Text(f'{i} ').move_to(pos).scale(table_scale*0.80);
-        index.append(act);
-        self.play(Write(index[i]),run_time=0.25)
+class Array:
 
-def iterateArrayAnimation(self,table,start,end=None,ite=None,table_scale=1,waitOnElement=1.5):
-    ite_copy = ite.copy() if ite is not None else None
-    positions = []
-    for element in table.get_columns():
-        pos = element.get_bottom()
-        pos[1]-=table_scale*1.15
-        positions.append(pos)
-    arrow = Arrow().scale(table_scale*0.75).rotate(PI/2).move_to(positions[start])
-    if ite is not None:
-        self.play(Write(arrow),Write(ite),run_time=1.5)
-        self.play(Transform(ite,Text(f"i = {start}").match_style(ite_copy).move_to(ite.get_center())),run_time=1.5)
-    else:
-        self.play(Write(arrow),run_time=1.5)
-    self.wait(waitOnElement)
-    for i in range(start+1,min(len(positions),end+1) if end is not None else len(positions)):
-        if ite is not None:
-            self.play(arrow.animate.move_to(positions[i]),Transform(ite,Text(f"i = {i}").match_style(ite_copy).move_to(ite.get_center())),run_time=1.5)
-        else:
-            self.play(arrow.animate.move_to(positions[i]),run_time=1.5)
-        self.wait(waitOnElement)
-    self.play(FadeOut(arrow),run_time=1.5)
+    def __init__(self,elements_,scale_=1):
+        self.elements = elements_
+        self.size = len(self.elements)
+        self.scale = scale_
+        self.max_element = max(self.elements)
+        self.min_element = min(self.elements)
+        self.table = Table([[str(number) for number in self.elements]],include_outer_lines=True).scale(scale_)
+        self.downPoints = []
+        self.upPoints = []
+
+    def getUpPoints(self,delta):
+        upPoints = []
+        for column in self.table.get_columns():
+            final_column = column.get_top();
+            final_column[1]+=self.scale*delta
+            upPoints.append(final_column)
+        return upPoints
+
+    def getDownPoints(self,delta):
+        downPoints = []
+        for column in self.table.get_columns():
+            final_column = column.get_bottom();
+            final_column[1]-=self.scale*delta
+            downPoints.append(final_column)
+        return downPoints
+
+    def putIndex(self,scene,index=[]):
+        points = self.getUpPoints(1)
+        for pos in range(0,self.size):
+            text = Text(f"{pos} ").scale(self.scale).move_to(points[pos])
+            index.append(text)
+            scene.play(Write(index[pos]),run_time=0.2)
     
+    def denoteArray(self,scene,name):
+        name.next_to(self.table,LEFT).scale(self.scale)
+        scene.play(Write(name),run_time=2)
+
+    def linearSearch(self,scene,target,waitOnElement=2):
+        points = self.getDownPoints(1.4)
+        arrow = Arrow().scale(self.scale).rotate(PI/2).move_to(points[0])
+        scene.play(Write(arrow),run_time=1.5)
+        for pos in range(0,len(points)):
+            scene.play(arrow.animate.move_to(points[pos]),runt_time=1.5)
+            scene.wait(waitOnElement)
+            if(self.elements[pos]==target):
+                break
+        scene.play(FadeOut(arrow),run_time=1.5)
+    
+
+
+class Introduction(Scene):
+    def construct(self):
+        # Code here
+        self.wait(5)
