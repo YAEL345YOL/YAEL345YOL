@@ -1,1 +1,2 @@
-<img src="https://github.com/YAEL345YOL/YAEL345YOL/assets/50465405/d9d6586f-e663-40d7-99da-0993c4e34465" width="1500">
+<img src="https://github.com/YAEL345YOL/YAEL345YOL/assets/50465405/d9d6586f-e663-40d7-99da-0993c4e34465" width="1500">![GitHub followers](https://img.shields.io/github/followers/YAEL345YOL?style=social)![GitHub User's stars](https://img.shields.io/github/stars/YAEL345YOL?style=social)
+![Visitor](https://visitor-badge.laobi.icu/badge?page_id=YAEL345YOL.) <img src="https://komarev.com/ghpvc/?username=YAEL345YOL" alt="YAEL345YOL" />
