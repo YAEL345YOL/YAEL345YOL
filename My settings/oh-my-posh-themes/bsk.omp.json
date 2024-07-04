@@ -8,8 +8,7 @@
                 {
                     "type": "text",
                     "style": "plain",
-                    "background" : 
-                    "template": "{{ .UserName }}  {{ .Root }}"
+                    "template": "{{ .UserName }}"
                 },
                 {
                     "type": "path",
