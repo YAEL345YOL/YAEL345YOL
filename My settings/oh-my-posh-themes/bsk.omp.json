@@ -20,7 +20,7 @@
                 },
                 {
                     "type": "git",
-                    "style": "powerline",
+                    "style": "diamond",
                     "background" : "#4A148C",
                     "template": "{{ if .BranchStatus }}\uE0A0{{ end }}"  
                 },
