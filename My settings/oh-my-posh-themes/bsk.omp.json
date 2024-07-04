@@ -6,6 +6,11 @@
             "alignment": "left",
             "segments": [
                 {
+                    "type": "session",
+                    "style": "plain",
+                    "template": "{{ .UserName }}"
+                },
+                {
                     "type": "path",
                     "style": "powerline",
                     "powerline_symbol": "",
