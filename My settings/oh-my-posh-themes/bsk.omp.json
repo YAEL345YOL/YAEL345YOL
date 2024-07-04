@@ -12,6 +12,11 @@
                     "template": "{{ .UserName }}"
                 },
                 {
+                    "type": "battery",
+                    "style": "powerline",
+                    "template": "{{ .Percentage }}"
+                },
+                {
                     "type": "path",
                     "style": "powerline",
                     "template": "{{ .Path }}"
