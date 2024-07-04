@@ -7,7 +7,7 @@
             "segments": [
                 {
                     "type": "path",
-                    "style": "plain"
+                    "style": "powerline"
                 }
             ]
         }
