@@ -9,11 +9,13 @@
                 {
                     "type": "session",
                     "style": "powerline",
+                    "background" : "#8C9EFF",
                     "template": "{{ .UserName }}"
                 },
                 {
                     "type": "battery",
                     "style": "powerline",
+                    "background" : "#536DFE",   
                     "template": "{{ .Percentage }}"
                 },
                 {
