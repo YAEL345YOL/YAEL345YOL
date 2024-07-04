@@ -9,7 +9,7 @@
                     "type": "session",
                     "style": "powerline",
                     "background" : "#000000",
-                    "template": "\udb82\udc25{{ .UserName }}"
+                    "template": "󰠥 {{ .UserName }}"
                 },
                 {
                     "type": "battery",
@@ -21,7 +21,7 @@
                         "{{ if le .Percentage 80 }}#8C0303{{ end }}",
                         "{{ if le .Percentage 100 }}#F2EA79{{ end }}"                        
                     ],
-                    "template": "{{ .Icon }}{{ .Percentage }}\udb80\udf53",
+                    "template": "{{ .Icon }}{{ .Percentage }}",
                     "properties": {
                         "discharging_icon": "󱟨",
                         "charging_icon": "󱟦",
