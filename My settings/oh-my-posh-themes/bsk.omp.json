@@ -8,12 +8,12 @@
                 {
                     "type": "session",
                     "style": "powerline",
-                    "template": "{{ .UserName }}"
+                    "template": "[{{ .UserName }}]-[{{.Root}}]"
                 },
                 {
                     "type": "path",
-                    "style": "accordion",
-                    "template": "{{ .Path }}"
+                    "style": "powerline",
+                    "template": "[{{ .Path }}]"
                 }
             ]
         }
