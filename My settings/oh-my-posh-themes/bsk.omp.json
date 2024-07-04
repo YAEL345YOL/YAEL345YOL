@@ -10,7 +10,7 @@
                     "style": "powerline",
                     "powerline_symbol": "",
                     "foreground" : "#ffffff",
-                    "background" : "#1A237E",
+                    "background" : "#232752",
                     "properties": {
                         "style": "folder"
                     }
