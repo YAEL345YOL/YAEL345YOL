@@ -7,8 +7,13 @@
             "segments": [
                 {
                     "type": "session",
-                    "style": "diamond",
-                    "template": "<i>{{ .UserName }}</i>"
+                    "style": "powerline",
+                    "template": "{{ .UserName }}"
+                },
+                {
+                    "type": "path",
+                    "style": "powerline",
+                    "template": "{{ .Path }}"
                 }
             ]
         }
