@@ -7,17 +7,8 @@
             "segments": [
                 {
                     "type": "session",
-                    "style": "powerline",
+                    "style": "diamond",
                     "template": "{{ .UserName }}"
-                },
-                {
-                    "type": "path",
-                    "style": "powerline",
-                    "foreground" : "#ffffff",
-                    "background" : "#0D47A1",
-                    "properties": {
-                        "style": "folder"
-                    }
                 }
             ]
         }
