@@ -13,7 +13,7 @@
                 {
                     "type": "path",
                     "style": "powerline",
-                    "template": "[{{ .Path }}]"
+                    "template": "{{ .Path }}"
                 }
             ]
         }
