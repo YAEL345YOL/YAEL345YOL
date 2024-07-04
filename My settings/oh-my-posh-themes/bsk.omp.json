@@ -19,7 +19,7 @@
                 {
                     "type": "git",
                     "style": "powerline",
-                    "template": "{{ if .BranchStatus }}\uF408\uE0A0{{ end }}"  
+                    "template": "\uF408{{ if .BranchStatus }}\uE0A0{{ end }}"  
                 },
                 {
                     "type": "path",
