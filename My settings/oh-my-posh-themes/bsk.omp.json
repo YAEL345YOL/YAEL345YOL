@@ -14,12 +14,12 @@
                 {
                     "type": "battery",
                     "style": "powerline",
-                    "template": "{{ .Percentage }}"
+                    "template": "{{ .Percentage }}%"
                 },
                 {
                     "type": "git",
                     "style": "powerline",
-                    "template": "\uF408{{ if .BranchStatus }}\uE0A0{{ end }}"  
+                    "template": "{{ if .BranchStatus }}\uE0A0{{ end }}"  
                 },
                 {
                     "type": "path",
