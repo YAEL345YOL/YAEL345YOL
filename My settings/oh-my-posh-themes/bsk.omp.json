@@ -6,9 +6,10 @@
             "alignment": "left",
             "segments": [
                 {
-                    "type": "session",
+                    "type": "text",
                     "style": "plain",
-                    "template": "{{ .UserName }}{{ .Root }}"
+                    "background" : "#0D47A1",
+                    "template": "{{ .UserName }}"
                 },
                 {
                     "type": "path",
