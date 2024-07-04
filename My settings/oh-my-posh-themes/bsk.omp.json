@@ -6,7 +6,7 @@
             "alignment": "left",
             "segments": [
                 {
-                    "type": "text",
+                    "type": "session",
                     "style": "plain",
                     "template": "{{ .UserName }}"
                 },
