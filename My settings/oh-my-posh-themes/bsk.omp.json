@@ -28,7 +28,6 @@
                     "type": "path",
                     "style": "powerline",
                     "background" : "#212121",
-                    "foreground" : "#fffdfd",
                     "template": "{{ .Path }}"
                 }
             ]
