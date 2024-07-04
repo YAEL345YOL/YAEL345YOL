@@ -22,7 +22,12 @@
                         "{{ if le .Percentage 80 }}#8C0303{{ end }}",
                         "{{ if le .Percentage 100 }}#F2EA79{{ end }}"                        
                     ],
-                    "template": "{{ .Percentage }}"
+                    "template": "{{ .Icon }}{{ .Percentage }}",
+                    "properties": {
+                        "discharging_icon": "󱟨",
+                        "charging_icon": "󱟦",
+                        "charged_icon": "󱟢"
+                    }
                 },
                 {
                     "type": "git",
