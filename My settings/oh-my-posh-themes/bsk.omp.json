@@ -15,14 +15,20 @@
                 {
                     "type": "battery",
                     "style": "powerline",
-                    "background" : "#536DFE",   
+                    "background_templates": [
+                        "{{if le .Porcent 20.0}}#F23535{{end}}",
+                        "{{if le .Porcent 40.0}}#F21616{{end}}",
+                        "{{if le .Porcent 60.0}}#590505{{end}}",
+                        "{{if le .Porcent 80.0}}#8C0303{{end}}",
+                        "{{if le .Porcent 100.0}}#F2EA79{{end}}"                        
+                    ],
                     "template": "{{ .Percentage }}"
                 },
                 {
                     "type": "git",
                     "style": "powerline",
                     "background" : "#4A148C",
-                    "template": "{{ if .BranchStatus }}\uF408\uE0A0{{ end }}"  
+                    "template": "{{ if .BranchStatus }}\uE0A0{{ end }}"  
                 },
                 {
                     "type": "path",
