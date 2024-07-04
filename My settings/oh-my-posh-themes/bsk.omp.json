@@ -7,7 +7,7 @@
             "segments": [
                 {
                     "type": "session",
-                    "style": "plain",
+                    "style": "powerline",
                     "template": "{{ .UserName }}"
                 },
                 {
