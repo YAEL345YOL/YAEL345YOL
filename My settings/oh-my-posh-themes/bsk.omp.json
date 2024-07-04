@@ -8,6 +8,7 @@
                 {
                     "type": "path",
                     "style": "powerline",
+                    "powerline_symbol": "",
                     "foreground" : "#ffffff",
                     "background" : "#1A237E",
                     "properties": {
