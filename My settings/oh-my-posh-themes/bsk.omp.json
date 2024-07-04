@@ -1,46 +1,60 @@
 {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-    "blocks": [
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
         {
-            "type": "prompt",
-            "alignment": "left",
-            "segments": [
-                {
-                    "type": "session",
-                    "style": "powerline",
-                    "background" : "#000000",
-                    "template": "󰠥 {{ .UserName }}"
-                },
-                {
-                    "type": "battery",
-                    "style": "powerline",
-                    "background_templates": [
-                        "{{ if le .Percentage 20 }}#F23535{{ end }}",
-                        "{{ if le .Percentage 40 }}#F21616{{ end }}",
-                        "{{ if le .Percentage 60 }}#590505{{ end }}",
-                        "{{ if le .Percentage 80 }}#8C0303{{ end }}",
-                        "{{ if le .Percentage 100 }}#F2EA79{{ end }}"                        
-                    ],
-                    "template": "{{ .Icon }}{{ .Percentage }}",
-                    "properties": {
-                        "discharging_icon": "󱟨",
-                        "charging_icon": "󱟦",
-                        "charged_icon": "󱟢"
-                    }
-                },
-                {
-                    "type": "git",
-                    "style": "powerline",
-                    "background" : "#330d61",
-                    "template": "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}"  
-                },
-                {
-                    "type": "path",
-                    "style": "powerline",
-                    "background" : "#000000",
-                    "template": "{{ .Path }}"
-                }
-            ]
+          "type": "session",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "background" : "#262626"
+        },
+        {
+            "type": "session",
+            "style": "powerline",
+            "powerline_symbol": "",
+            "background" : "#404040",
+            "template": " {{ if .Root }}󰇂{{end}}󰏉 "
+        },
+        {
+          "type": "battery",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground" : "#4f3856",
+          "background_templates": [
+            "{{ if le .Percentage 20 }}#0D0D0D{{ end }}",
+            "{{ if le .Percentage 40 }}#ABD98B{{ end }}",
+            "{{ if le .Percentage 60 }}#7FBF50{ end }}",
+            "{{ if le .Percentage 80 }}#65D930{{ end }}",
+            "{{ if le .Percentage 100 }}#47fa27{{ end }}"
+          ],
+          "template": " {{ .Icon }}{{ .Percentage }} ",
+          "properties": {
+            "charged_icon": "\udb85\udfe2",
+            "charging_icon": "\udb85\udfe6",
+            "discharging_icon": "\udb85\udfe8"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "background" : "#646464",
+          "foreground" : "#d7d7d7",
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} "
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "background" : "#BFBFBF",
+          "foreground" : "#000000",
+          "template": " {{ .Path }} "   
         }
-    ]
+      ]
+    }
+  ]
 }
