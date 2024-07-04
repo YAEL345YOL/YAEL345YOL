@@ -15,6 +15,7 @@
                 {
                     "type": "battery",
                     "style": "powerline",
+                    "background": "#ffeb3b",
                     "background_templates": [
                         "{{if le .Percentage 20.0}}#F23535{{end}}",
                         "{{if le .Percentage 40.0}}#F21616{{end}}",
