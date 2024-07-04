@@ -8,7 +8,7 @@
                 {
                     "type": "session",
                     "style": "plain",
-                    "template": "{{if .Root }}{{!}}{{}}{{ .UserName }}"
+                    "template": "[{{ .UserName }}] - [{{ .Path }}]"
                 },
                 {
                     "type": "path",
