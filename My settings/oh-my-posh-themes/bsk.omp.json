@@ -22,7 +22,7 @@
                     "type": "git",
                     "style": "powerline",
                     "background" : "#4A148C",
-                    "template": "{{ if .BranchStatus }}\uE0A0{{ end }}"  
+                    "template": "{{ if .BranchStatus }}\uF408\uE0A0{{ end }}"  
                 },
                 {
                     "type": "path",
