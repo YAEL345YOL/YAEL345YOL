@@ -16,11 +16,11 @@
                     "type": "battery",
                     "style": "powerline",
                     "background_templates": [
-                        "{{if le .Porcent 20.0}}#F23535{{end}}",
-                        "{{if le .Porcent 40.0}}#F21616{{end}}",
-                        "{{if le .Porcent 60.0}}#590505{{end}}",
-                        "{{if le .Porcent 80.0}}#8C0303{{end}}",
-                        "{{if le .Porcent 100.0}}#F2EA79{{end}}"                        
+                        "{{if le .Percentage 20.0}}#F23535{{end}}",
+                        "{{if le .Porcentage 40.0}}#F21616{{end}}",
+                        "{{if le .Porcentage 60.0}}#590505{{end}}",
+                        "{{if le .Porcentage 80.0}}#8C0303{{end}}",
+                        "{{if le .Porcentage 100.0}}#F2EA79{{end}}"                        
                     ],
                     "template": "{{ .Percentage }}"
                 },
