@@ -12,7 +12,10 @@
                     "foreground" : "#ffffff",
                     "background" : "#B388FF",
                     "properties": {
-                        "style": "folder"
+                        "style": "folder",
+                        "mapped_locations": {
+                          "C:\\temp": ""
+                        }
                     }
                 }
             ]
