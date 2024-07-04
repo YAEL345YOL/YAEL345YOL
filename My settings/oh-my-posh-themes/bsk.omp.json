@@ -22,7 +22,7 @@
                         "{{ if le .Percentage 80 }}#8C0303{{ end }}",
                         "{{ if le .Percentage 100 }}#F2EA79{{ end }}"                        
                     ],
-                    "template": "{{ .Icon }} {{ .Percentage }} \udb80\udf53",
+                    "template": "{{ .Icon }} {{ .Percentage }}\udb80\udf53",
                     "properties": {
                         "discharging_icon": "󱟨",
                         "charging_icon": "󱟦",
