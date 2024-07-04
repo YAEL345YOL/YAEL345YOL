@@ -17,6 +17,11 @@
                     "template": "{{ .Percentage }}"
                 },
                 {
+                    "type": "git",
+                    "style": "powerline",
+                    "template": "{{ if .IsWorkTree }}\uE5FB{{ end }}"  
+                },
+                {
                     "type": "path",
                     "style": "powerline",
                     "template": "{{ .Path }}"
