@@ -8,7 +8,7 @@
                 {
                     "type": "session",
                     "style": "diamond",
-                    "template": "{{ .UserName }}"
+                    "template": "<i>{{ .UserName }}</i>"
                 }
             ]
         }
