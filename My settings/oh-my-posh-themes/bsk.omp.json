@@ -7,7 +7,16 @@
             "segments": [
                 {
                     "type": "path",
-                    "style": "powerline"
+                    "style": "powerline",
+                    "powerline_symbol": "",
+                    "foreground": "#ffffff",
+                    "background": "#61AFEF",
+                    "properties": {
+                        "style": "folder",
+                        "mapped_locations": {
+                          "C:\\temp": ""
+                        }
+                    }
                 }
             ]
         }
