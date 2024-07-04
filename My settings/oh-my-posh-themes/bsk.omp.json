@@ -32,7 +32,7 @@
                     "type": "git",
                     "style": "powerline",
                     "background" : "#330d61",
-                    "template": "{{ if .BranchStatus }}\uE0A0{{ end }}"  
+                    "template": "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}"  
                 },
                 {
                     "type": "path",
