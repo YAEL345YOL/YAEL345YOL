@@ -8,7 +8,7 @@
                 {
                     "type": "session",
                     "style": "plain",
-                    "template": "{{ .UserName }}"
+                    "template": "{{ .HostName }}"
                 },
                 {
                     "type": "path",
