@@ -12,7 +12,7 @@
                 },
                 {
                     "type": "path",
-                    "style": "powerline",
+                    "style": "diamond",
                     "template": "{{ .Path }}"
                 }
             ]
