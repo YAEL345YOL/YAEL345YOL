@@ -27,7 +27,7 @@
                 {
                     "type": "path",
                     "style": "powerline",
-                    "background" : "#212121",
+                    "background" : "#504f4f",
                     "template": "{{ .Path }}"
                 }
             ]
