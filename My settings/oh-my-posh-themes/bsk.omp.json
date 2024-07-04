@@ -22,7 +22,7 @@
                         "{{if le .Porcentage 80.0}}#8C0303{{end}}",
                         "{{if le .Porcentage 100.0}}#F2EA79{{end}}"                        
                     ],
-                    "template": "{{ .Percentage }}"
+                    "template": "{{ .Percentage }}%"
                 },
                 {
                     "type": "git",
