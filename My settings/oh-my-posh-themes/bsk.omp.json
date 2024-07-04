@@ -7,9 +7,7 @@
             "segments": [
                 {
                     "type": "path",
-                    "style": "plain",
-                    "background" : "#000000",
-                    "foreground" : "#ffffff"
+                    "style": "plain"
                 }
             ]
         }
