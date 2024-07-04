@@ -8,8 +8,8 @@
                 {
                     "type": "text",
                     "style": "plain",
-                    "background" : "#0D47A1",
-                    "template": "{{ .UserName }}"
+                    "background" : 
+                    "template": "{{ .UserName }}  {{ .Root }}"
                 },
                 {
                     "type": "path",
