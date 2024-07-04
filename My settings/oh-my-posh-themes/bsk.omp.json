@@ -12,7 +12,7 @@
                 },
                 {
                     "type": "path",
-                    "style": "diamond",
+                    "style": "accordion",
                     "template": "{{ .Path }}"
                 }
             ]
