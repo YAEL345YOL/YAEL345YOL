@@ -27,13 +27,13 @@
                 {
                     "type": "git",
                     "style": "powerline",
-                    "background" : "#4A148C",
+                    "background" : "#330d61",
                     "template": "{{ if .BranchStatus }}\uE0A0{{ end }}"  
                 },
                 {
                     "type": "path",
                     "style": "powerline",
-                    "background" : "#212121",
+                    "background" : "#000000",
                     "template": "{{ .Path }}"
                 }
             ]
