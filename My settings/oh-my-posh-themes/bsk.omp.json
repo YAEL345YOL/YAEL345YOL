@@ -21,11 +21,13 @@
                 {
                     "type": "git",
                     "style": "powerline",
+                    "background" : "#4A148C",
                     "template": "{{ if .BranchStatus }}\uE0A0{{ end }}"  
                 },
                 {
                     "type": "path",
                     "style": "powerline",
+                    "background" : "#212121",
                     "template": "{{ .Path }}"
                 }
             ]
