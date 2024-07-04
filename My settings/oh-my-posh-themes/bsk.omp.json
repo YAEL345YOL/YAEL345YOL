@@ -7,6 +7,11 @@
       "alignment": "left",
       "segments": [
         {
+            "type": "text",
+            "style": "plain",
+            "template": "\u250c\u2500\u2500"
+        },
+        {
           "type": "session",
           "style": "powerline",
           "powerline_symbol": "",
@@ -53,6 +58,11 @@
           "background" : "#BFBFBF",
           "foreground" : "#000000",
           "template": " {{ .Path }} "   
+        },
+        {
+            "type": "text",
+            "style": "powerline",
+            "template": "\n\u2514\u2500$ "
         }
       ]
     }
