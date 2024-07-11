@@ -1,70 +1,60 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
-  "blocks": [
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "version": 2,
+    "console_title_template": "{{ .UserName }}@{{ .HostName }}",
+    "blocks": [
         {
-            "type": "text",
-            "style": "plain",
-            "template": "\u250c\u2500\u2500"
-        },
-        {
-          "type": "session",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "background" : "#262626"
-        },
-        {
-            "type": "session",
-            "style": "powerline",
-            "powerline_symbol": "",
-            "background" : "#404040",
-            "template": " {{ if .Root }}󰇂{{end}}󰏉 "
-        },
-        {
-          "type": "battery",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "foreground" : "#4f3856",
-          "background_templates": [
-            "{{ if le .Percentage 20 }}#0D0D0D{{ end }}",
-            "{{ if le .Percentage 40 }}#ABD98B{{ end }}",
-            "{{ if le .Percentage 60 }}#7FBF50{ end }}",
-            "{{ if le .Percentage 80 }}#65D930{{ end }}",
-            "{{ if le .Percentage 100 }}#47fa27{{ end }}"
-          ],
-          "template": " {{ .Icon }}{{ .Percentage }} ",
-          "properties": {
-            "charged_icon": "\udb85\udfe2",
-            "charging_icon": "\udb85\udfe6",
-            "discharging_icon": "\udb85\udfe8"
-          }
-        },
-        {
-          "type": "git",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "background" : "#646464",
-          "foreground" : "#d7d7d7",
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} "
-        },
-        {
-          "type": "path",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "background" : "#BFBFBF",
-          "foreground" : "#000000",
-          "template": " {{ .Path }} "   
-        },
-        {
-            "type": "text",
-            "style": "powerline",
-            "template": "\n\u2514\u2500$ "
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "session",  
+                    "style": "diamond",
+                    "background" : "#212121",
+                    "leading_diamond": ""
+                },
+                {
+                    "type": "session",
+                    "style": "diamond",
+                    "background" : "#41006c",
+                    "leading_diamond": "",
+                    "template": " {{ if .Root }}󰀫{{ else }}󰏉{{ end }} "
+                },
+                {
+                    "type": "battery",
+                    "style": "diamond",
+                    "background" : "#510000",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "template": " {{ .Icon }} {{ .Percentage }}% ",
+                    "properties": {
+                        "discharging_icon": "󱕤",
+                        "charging_icon": "󱕣",
+                        "charged_icon": "󱕦"
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "diamond",
+                    "background" : "#2e0048",
+                    "trailing_diamond": ""
+                },
+                {
+                    "type": "path",
+                    "style": "diamond",
+                    "background" : "#000149",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "folder_icon": "",
+                        "home_icon": "󱁉"
+                    }
+                },
+                {
+                    "type": "text",
+                    "style": "powerline",
+                    "template": "\n "
+                }
+            ]   
         }
-      ]
-    }
-  ]
+    ]
 }
